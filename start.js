@@ -11,9 +11,7 @@ chrome.contextMenus.onClicked.addListener(function(data){
 	if(data.menuItemId == "ParaToNote" && data.selectionText){
 		//var text = closeButton+'<li>'+ data.selectionText +'</li>';
 		var text = data.selectionText;
-		alert(text);
 		var splitedText = splitText(text);
-		alert(splitedText);
 		splitedText = formatData(splitedText);
 		updateNotes(splitedText);
 	}
@@ -22,7 +20,6 @@ chrome.contextMenus.onClicked.addListener(function(data){
 
 function splitText(text){
 	var splitedText = text.split(". ");
-	alert(splitedText);
 	return splitedText;
 }
 function formatData(splitText){
